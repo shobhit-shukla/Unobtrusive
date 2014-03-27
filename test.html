@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-git2.min.js"></script>
+	<title>Test</title>
+</head>
+<body>
+<button myattr="shobhit" class="myBtn">Click Toggle</button>
+<div class="myDiv">
+	<p></p>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(".myBtn").click(function(){
+		$(".myDiv").toggle('slow');
+		$(".myDiv p").html($(this).attr("myattr"));
+	});
+</script>
+<style type="text/css">
+	.myDiv{
+		height: 200px;
+		width: 200px;
+		background-color: orange;
+		display: none;
+		border-radius: 10px;
+	}
+	.myBtn{
+		height: 50px;
+		width: 150px;
+		background-color: cyan;
+		border-color: white;
+		color: grey;
+		border-radius: 50px; 
+	}
+	.myBtn:hover{
+		background-color: aquamarine;
+	}
+</style>
